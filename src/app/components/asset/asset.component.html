@@ -1,0 +1,22 @@
+<p>asset works!</p>
+
+<div *ngIf="assets.length">
+  <h2>List of Assets</h2>
+  <ul>
+    <li *ngFor="let asset of assets">
+      <div>ID: {{ asset.id }}</div>
+      <div>Code: {{ asset.code }}</div>
+      <div>Name: {{ asset.name }}</div>
+      <div>Avatar: {{ asset.avatarUrl ? asset.avatarUrl : 'N/A' }}</div>
+      <div>Serial Number: {{ asset.serialNumber ? asset.serialNumber : 'N/A' }}</div>
+      <button
+        (click)="deleteOne(asset.id)"
+      >
+        <span> {{ 'delete' }}</span>
+      </button>
+    </li>
+  </ul>
+</div>
+<div *ngIf="assets.length === 0">
+  <p>No assets found.</p>
+</div>

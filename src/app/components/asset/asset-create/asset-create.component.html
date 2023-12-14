@@ -1,0 +1,117 @@
+<p>asset-create works!</p>
+
+<form [formGroup]="assetForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name">
+  </div>
+
+  <div>
+    <label for="code">Code:</label>
+    <input type="text" id="code" formControlName="code">
+  </div>
+
+  <div>
+    <label for="serialNumber">Serial Number:</label>
+    <input type="text" id="serialNumber" formControlName="serialNumber">
+  </div>
+
+  <div>
+    <label for="category">Category:</label>
+    <input type="text" id="category" formControlName="category">
+  </div>
+
+  <div>
+    <label for="description">Description:</label>
+    <textarea id="description" formControlName="description"></textarea>
+  </div>
+
+  <div>
+    <label for="model">Model:</label>
+    <input type="text" id="model" formControlName="model">
+  </div>
+
+  <div>
+    <label for="purchaseDate">Purchase Date:</label>
+    <input type="date" id="purchaseDate" formControlName="purchaseDate">
+  </div>
+
+  <div>
+    <label for="purchasePrice">Purchase Price:</label>
+    <input type="number" id="purchasePrice" formControlName="purchasePrice">
+  </div>
+
+  <div>
+    <label for="residualValue">Residual Value:</label>
+    <input type="number" id="residualValue" formControlName="residualValue">
+  </div>
+
+  <div>
+    <label for="files">Files:</label>
+    <input type="text" id="files" formControlName="files">
+  </div>
+
+  <div>
+    <label for="locationId">Location ID:</label>
+    <input type="text" id="locationId" formControlName="locationId">
+  </div>
+
+  <div>
+    <label for="currentLocationId">Current Location ID:</label>
+    <input type="text" id="currentLocationId" formControlName="currentLocationId">
+  </div>
+
+  <div>
+    <label for="typeId">Type ID:</label>
+    <input type="text" id="typeId" formControlName="typeId">
+  </div>
+
+  <div>
+    <label for="departmentId">Department ID:</label>
+    <input type="text" id="departmentId" formControlName="departmentId">
+  </div>
+
+  <div>
+    <label for="userIds">User IDs:</label>
+    <input type="text" id="userIds" formControlName="userIds">
+  </div>
+
+  <div>
+    <label for="previousServiceDate">Previous Service Date:</label>
+    <input type="date" id="previousServiceDate" formControlName="previousServiceDate">
+  </div>
+
+  <div>
+    <label for="nextServiceDate">Next Service Date:</label>
+    <input type="date" id="nextServiceDate" formControlName="nextServiceDate">
+  </div>
+
+  <div>
+    <label for="manufacturer">Manufacturer:</label>
+    <input type="text" id="manufacturer" formControlName="manufacturer">
+  </div>
+
+  <div>
+    <label for="manufactureDate">Manufacture Date:</label>
+    <input type="date" id="manufactureDate" formControlName="manufactureDate">
+  </div>
+
+  <div>
+    <label for="usefulLife">Useful Life:</label>
+    <input type="text" id="usefulLife" formControlName="usefulLife">
+  </div>
+
+  <div>
+    <label for="createLabel">Create Label:</label>
+    <input type="checkbox" id="createLabel" formControlName="createLabel">
+  </div>
+
+  <div>
+    <label for="id">id:</label>
+    <input type="text" id="id" formControlName="id">
+  </div>
+
+  <button type="submit" [disabled]="!assetForm.valid">Create Asset</button>
+
+  <button type="button" (click)="onUpdateClick()" [disabled]="!assetForm.valid">Update Asset</button>
+</form>
